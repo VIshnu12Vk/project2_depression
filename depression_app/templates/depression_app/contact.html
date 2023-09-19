@@ -1,0 +1,28 @@
+{% include './navbar.html' %}
+<html>
+    <head>
+     <title>Contact</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'depression_app/css/contact.css' %}">
+    </head>
+    <body>
+        <div class="screen">
+            <div class="contact_c">
+                <div class="input_c">
+                    <input class="data" type="text" value="Name">
+                    <input class="data" type="text" value="Email">
+                    <textarea rows="10"></textarea>
+                </div>
+                <div class="button_c">
+                   <div class="submit_btn">
+                        <button>Submit</button>
+                   </div>
+                   <div class="cancel_btn">
+                        <button>Cancel</button>
+                   </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

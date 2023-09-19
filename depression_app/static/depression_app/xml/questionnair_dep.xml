@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<questions>
+    <question>
+        <dep>
+            <query>Do you feel like you have lost hope in yourself and in the world?</query>
+            <query>Do you have any strategies for coping with hopelessness?</query>
+        </dep>
+        <score>10</score>
+        <id>1</id>
+    </question>
+    <question>
+        <dep>
+            <query>Are you feeling frustrated about something</query>
+            <query>You seem a bit on edge. Are you feeling irritable, frustrated, or restless?</query>
+        </dep>
+        <score>10</score>
+        <id>1</id>
+    </question>
+    <question>
+        <dep>
+            <query>Do you feel remorse for anything you have done?</query>
+            <query>Do you feel like you have been struggling with feelings of guilt, worthlessness, or helplessness lately?</query>
+        </dep>
+        <score>10</score>
+        <id>1</id>
+    </question>
+    <question>
+        <dep>
+            <query>Do you feel like you've lost interessst in activities you used to enjoy?</query>
+            <query>Have you noticed a decrease in your enthusiasm for the things that you used to like to do?</query>
+        </dep>
+        <score>10</score>
+        <id>1</id>
+    </question>
+    <question>
+        <dep>
+            <query>Do you have difficulty completing tasks that normally wouldn't take much effort?</query>
+            <query>Have you been feeling like you don't have as much energy as you used to?</query>
+        </dep>
+        <score>20</score>
+        <id>2</id>
+    </question>
+    <question>
+        <dep>
+            <query>Have you noticed any changes in your appetite recently?</query>
+            <query>Have you noticed any noticeable changes in your appetite or weight that were not planned?</query>
+        </dep>
+        <score>10</score>
+        <id>1</id>
+    </question>
+    <question>
+        <dep>
+            <query>Have you had any thoughts of death or suicide lately?</query>
+            <query>Is there anything that has been making you feel like life isn't worth living?</query>
+        </dep>
+        <score>20</score>
+        <id>2</id>
+    </question>
+    <question>
+        <dep>
+            <query>Do you feel sleepy during the day even after getting enough sleep at night?</query>
+            <query>-Do you have difficulty falling asleep at night?</query>
+        </dep>
+        <score>10</score>
+        <id>1</id>
+    </question>
+    <question>
+        <dep>
+            <query>Do You Have A Past Experience Of Depression?</query>
+            <query>Have you ever experienced depression in the past?</query>
+        </dep>
+        <score>20</score>
+        <id>2</id>
+    </question>
+    <question>
+        <dep>
+            <query>Is Any One In Your Family Had A Depression</query>
+            <query>Have any members of your family experienced depression?</query>
+        </dep>
+        <score>20</score>
+        <id>2</id>
+    </question>
+</questions>

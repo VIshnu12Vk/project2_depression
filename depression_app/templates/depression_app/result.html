@@ -1,0 +1,34 @@
+{% include './navbar.html' %}
+<html>
+    <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'depression_app/css/result.css' %}">
+
+    </head>
+    <body>
+        <div class="screen">
+            <div class="heading">
+                <h1>Depression Test Result</h1>
+            </div>
+            <div class="result">
+                    <div class="percentage">
+                        <h2>Your depression test score is: <span id="percentageScore">{{ my_session_variable}}</span>%</h2>
+                        <h2>Your symptoms score is: <span id="symptomsScore">{{ answered_percentage}}</span>%</h2>
+                    </div>
+                    <div class="message">
+                        <h2>{{depression_message}}</h2>
+                    </div>
+            </div>
+            <div class="btn">
+                <h2>Dont Worry Everything Will be Okay </h2>
+            </div>
+
+        </div>
+        <!-- <script>
+        var percentageScore = 75; 
+        var symptomsScore = 50;
+        document.getElementById("percentageScore").textContent = percentageScore.toFixed(2);
+        document.getElementById("symptomsScore").textContent = symptomsScore.toFixed(2);
+    </script> -->
+
+    </body>

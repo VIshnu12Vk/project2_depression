@@ -1,0 +1,40 @@
+{% include './navbar.html' %}
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'depression_app/css/emotion.css' %}">
+    </head>
+    <body>
+        <div class="screen">
+            <div class="top">
+                    <div class="content">
+                        <ul class="a">
+                            <li>There are three tests in depression detector.</li>
+                            <li>Users should not skip any step.</li>
+                            <li>You must allow necessary permission for the system (ie camera,microphone).</li>
+                            
+                        </ul>     
+
+                    </div>
+                    <div class="content">
+                        <ul class="a">
+                            <li>Users should not refresh the page while testing.</li>
+                            <li>User shoult submit the form after finishing the test by clicking submit button.</li>
+                            <li>Result of the depression test erases immediatly after user close the window.</li>
+                           
+                        </ul>
+                    </div>
+                    <div class="content2">
+                        <!-- <img src="depw.jpg" alt="Girl in a jacket" width="500" height="600" hidden="hidden"> -->
+                        <img src="{% url 'live_emotion_detection' %}" width="500" height="600" class="hidden-image"  />
+
+                    </div>
+            </div>
+            <div class="bottom">
+                <button  onclick="window.location.href='{% url 'game' %}';" >Start Test</button>
+
+            </div>
+        </div>
+
+    </body>
+</html>

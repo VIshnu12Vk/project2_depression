@@ -1,0 +1,35 @@
+{% include './navbar.html' %}
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'depression_app/css/firstpage.css' %}">
+    </head>
+    <body>
+        <div class="screen">
+            <div class="container">
+                <div class="section1">
+                    <p>Depression is a common mental disorder.
+                    Globally, it is estimated that 5% of adults suffer from the disorder.
+                    It is characterized 
+                    by persistent sadness and a lack of interest or pleasure in previously rewarding or enjoyable activities.
+                    The effects of depression can be long-lasting or recurrent and can dramatically affect a person’s ability to
+                    function and live a rewarding life.</p> 
+                    <p>It is better to detect depression earlier, take a medical diagnose consult a doctor and get rid of 
+                    mental illness.To test whether you are exposed to depression take a online test by clicking the Test button.
+                    </p>
+                </div>
+                <div class="section2">
+                    <img src= "{% static 'depression_app/images/d_n.png' %}" alt="logo">
+                </div>
+            </div>
+            <div class="section3">
+                <!-- <a href="{% url 'secondpage' %}">Click here to go to the next webpage</a> -->
+                <button id="" onclick="window.location.href='{% url 'emotion_detection_page' %}';">Test</button>
+
+
+            </div>
+            
+        </div>
+        
+    </body>
+</html>

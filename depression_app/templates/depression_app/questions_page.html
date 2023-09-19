@@ -1,0 +1,127 @@
+{% include './navbar.html' %}
+<html>
+    <head>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'depression_app/css/question_page.css' %}">
+    </head>
+    <body>
+        <div class="screen">
+            <div class="container">
+                 <div class="left">
+
+                  <form method="post" action="{% url 'question_page' %}">
+                    {% csrf_token %}
+                    <div class="card">
+                      <h2 class="question">Do you feel like you have lost hope in yourself and in the world?</h2>
+                      <div class="options">
+                        <input type="radio" id="option1" name="hopeless" value="Never">
+                        <label for="option1">Never</label><br>
+                        <input type="radio" id="option2" name="hopeless" value="Sometimes">
+                        <label for="option2">Sometimes</label><br>
+                        <input type="radio" id="option3" name="hopeless" value="Everytime">
+                        <label for="option3">Everytime</label><br>
+                      </div>
+                    </div>
+                    <!-- <input type="submit" value="Submit"> -->
+                  
+                  
+
+                      <div class="card">
+                        <h2 class="question">Are you feeling frustrated about something?</h2>
+                        <div class="options">
+                          <input type="radio" id="option1" name="frustration" value="Never">
+                          <label for="option1">Never</label><br>
+                          <input type="radio" id="option2" name="frustration" value="Sometimes">
+                          <label for="option2">Sometimes</label><br>
+                          <input type="radio" id="option3" name="frustration" value="Everytime">
+                          <label for="option3">Everytime</label><br>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <h2 class="question">Do you feel like you've lost interest in activities you used to enjoy?</h2>
+                        <div class="options">
+                          <input type="radio" id="option1" name="lost_interest" value="Never">
+                          <label for="option1">Never</label><br>
+                          <input type="radio" id="option2" name="lost_interest" value="Sometimes">
+                          <label for="option2">Sometimes</label><br>
+                          <input type="radio" id="option3" name="lost_interest" value="Everytime">
+                          <label for="option3">Everytime</label><br>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <h2 class="question">Do you have any past experience of depression?</h2>
+                        <div class="options">
+                          <input type="radio" id="option1" name="Past" value="Yes">
+                          <label for="option1">Yes</label><br>
+                          <input type="radio" id="option2" name="Past" value="No">
+                          <label for="option2">No</label><br>
+  
+                        </div>
+                      </div>
+
+
+                 </div>
+                 <div class="right">
+
+                    <div class="card">
+                        <h2 class="question">Have you noticed any changes in your appetite recently?</h2>
+                        <div class="options">
+                          <input type="radio" id="option1" name="weight" value="Never">
+                          <label for="option1">Never</label><br>
+                          <input type="radio" id="option2" name="weight" value="Sometimes">
+                          <label for="option2">Sometimes</label><br>
+                          <input type="radio" id="option3" name="weight" value="Everytime">
+                          <label for="option3">Everytime</label><br>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <h2 class="question">Have you had any thoughts of death or suicide lately?</h2>
+                        <div class="options">
+                          <input type="radio" id="option1" name="suicide" value="Never">
+                          <label for="option1">Never</label><br>
+                          <input type="radio" id="option2" name="suicide" value="Sometimes">
+                          <label for="option2">Sometimes</label><br>
+                          <input type="radio" id="option3" name="suicide" value="Everytime">
+                          <label for="option3">Everytime</label><br>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <h2 class="question">Do you feel sleepy during the day even after getting enough sleep at night?</h2>
+                        <div class="options">
+                          <input type="radio" id="option1" name="insomnia" value="Never">
+                          <label for="option1">Never</label><br>
+                          <input type="radio" id="option2" name="insomnia" value="Sometimes">
+                          <label for="option2">Sometimes</label><br>
+                          <input type="radio" id="option3" name="insomnia" value="Everytime">
+                          <label for="option3">Everytime</label><br>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <h2 class="question">Does any one in your family have/had depression?</h2>
+                        <div class="options">
+                          <input type="radio" id="option1" name="Family" value="Yes">
+                          <label for="option1">Yes</label><br>
+                          <input type="radio" id="option2" name="Family" value="No">
+                          <label for="option2">No</label><br>
+                          
+                        </div>
+                      </div>
+                 </div>
+            </div>
+            <div class="btn_container">
+              <form action="{% url 'secondpage' %}" method="post">
+                {% csrf_token %}
+                <input  type="submit" value="Submit">
+                
+              </form>
+              <button onclick="window.location.href='{% url 'secondpage' %}';" >Next Test</button>
+            </div>
+          </form>
+        </div>
+    </body>
+</html>

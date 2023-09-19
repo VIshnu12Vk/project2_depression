@@ -1,0 +1,50 @@
+{% include './navbar.html' %}
+<html>
+    <head>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'depression_app/css/secondpage_test.css' %}">
+    </head>
+    <body>
+        <div class="screen">
+            <div class="question_container">
+                <div class="q_c">
+                    <div class="q_apper">
+                        <h2 id="my-heading">What is the major reason for attending the test ? </h2>
+                    </div>
+                    <form action="{% url 'secondpage' %}" method="post">
+                      {% csrf_token %}
+                    <div class="answer">
+                      <textarea name="my_textarea" id="convert_text"></textarea>
+                    </div>
+                    <div class="options">
+                        <button>Clear</button>
+                        <button id="click_to_record">Speak</button>
+                        <button type="submit" id="my-button">Submit</button>
+                    </div>
+                  </form>
+                </div>
+                
+            </div>
+            <div class="button_container">
+                <button onclick="window.location.href='{% url 'result_view' %}';">Next</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="{% static 'depression_app/javascript/page_two.js' %}"></script>
+        <script>
+            document.getElementById('my-button').addEventListener('click', function() {
+              fetch('/my-view/').then(response => {
+                if (response.ok) {
+                  return response.text();
+                } else {
+                  throw new Error('Something went wrong');
+                }
+              }).then(data => {
+                document.getElementById('my-heading').textContent = data;
+              }).catch(error => {
+                console.error(error);
+              });
+            });
+          </script>
+          
+    </body>
+</html>

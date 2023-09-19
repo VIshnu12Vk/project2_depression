@@ -1,0 +1,26 @@
+
+    <html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'depression_app/css/navbar.css' %}">
+    </head>
+    <body>
+        
+    <div class="navbar">
+        <div class="logo_bar">
+            <img src= "{% static 'depression_app/images/logo22.png' %}" alt="logo">
+        </div>
+        <div class="links_bar">
+            <div class="empty">
+             
+            </div>
+            <div class="contact">
+              
+            </div>
+            <div class="about">
+              <a href="{% url 'about' %}">About</a>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
